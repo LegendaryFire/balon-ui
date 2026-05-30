@@ -2,6 +2,21 @@ import './Sidebar.css';
 import { createElement, icons } from 'lucide';
 
 export class Sidebar extends HTMLElement {
+    static get observedAttributes() {
+        return ['position'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        // When the side flips while the sidebar is closed, the new side animates
+        // a different property (left vs right) whose starting value is `auto`,
+        // which can't be interpolated, so the panel pops in instead of sliding.
+        // Forcing a reflow here commits the new side's off-screen position before
+        // `hidden` is toggled, giving the transition a concrete value to animate from.
+        if (name === 'position' && oldValue !== null && oldValue !== newValue && this.hidden) {
+            void this.offsetWidth;
+        }
+    }
+
     connectedCallback() {
         this.innerHTML = `
             <div class="sidebar-content">
