@@ -1,6 +1,6 @@
 import './Sidebar.css';
 
-export default class Sidebar extends HTMLElement {
+export class Sidebar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="sidebar-content">
@@ -14,3 +14,6 @@ export default class Sidebar extends HTMLElement {
         });
     }
 }
+
+export class SidebarHeader extends HTMLElement { }
+export class SidebarBody extends HTMLElement { }

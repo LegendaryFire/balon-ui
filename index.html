@@ -29,7 +29,14 @@
 </script>
 
 <body>
-    <x-sidebar position="left" hidden>This is the content of my sidebar.</x-sidebar>
+    <x-sidebar position="left" hidden>
+        <x-sidebar-header>
+            Sidebar Header
+        </x-sidebar-header>
+        <x-sidebar-body>
+            This is the content of my sidebar.
+        </x-sidebar-body>
+    </x-sidebar>
 
     <x-content>
         <x-card size="medium">
@@ -80,17 +87,6 @@
                         </x-card-header>
                         <x-card-body>
                             This is an example of a small card.
-                        </x-card-body>
-                        <x-card-footer>
-                            <x-button class="toggle-sidebar-btn" size="small" variant="secondary">Open the Sidebar</x-button>
-                        </x-card-footer>
-                    </x-card>
-                    <x-card size="medium" variant="secondary">
-                        <x-card-header>
-                            Medium Card
-                        </x-card-header>
-                        <x-card-body>
-                            This is an example of a medium card.
                         </x-card-body>
                         <x-card-footer>
                             <x-button class="toggle-sidebar-btn" size="small" variant="secondary">Open the Sidebar</x-button>

@@ -20,46 +20,33 @@ x-card {
         background-color: var(--background-color-primary);
     }
 
+    &,
     &[size=small] {
-        x-card-header {
-            padding: 8px 10px 6px 10px;
-        }
-
-        x-card-body {
-            padding: 10px 10px;
-        }
-
-        x-card-footer {
-            padding: 6px 10px;
-        }
-    }
-
-    &[size=medium] {
-        x-card-header {
+        & > x-card-header {
             padding: 10px 12px 8px 12px;
         }
 
-        x-card-body {
+        & > x-card-body {
             padding: 12px 12px;
         }
 
-        x-card-footer {
+        & > x-card-footer {
             padding: 8px 12px;
         }
     }
 
     &[size=large] {
-        x-card-header {
+        & > x-card-header {
             padding: 16px 18px 14px 18px;
             font-size: 18px;
         }
 
-        x-card-footer {
-            padding: 14px 18px;
+        & > x-card-body {
+            padding: 18px 18px;
         }
 
-        x-card-body {
-            padding: 18px 18px;
+        & > x-card-footer {
+            padding: 14px 18px;
         }
     }
 

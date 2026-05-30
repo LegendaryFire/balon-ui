@@ -68,4 +68,18 @@ x-sidebar {
     &[hidden] x-overlay {
         display: none;
     }
+
+    x-sidebar-header {
+        display: flex;
+        width: 100%;
+        padding: 16px 8px;
+        border-bottom: var(--border-width-primary) solid var(--border-color-primary);
+        font-weight: bold;
+    }
+
+    x-sidebar-body {
+        display: flex;
+        width: 100%;
+        padding: 16px 8px;
+    }
 }
