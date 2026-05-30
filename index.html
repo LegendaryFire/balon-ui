@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./dist/index.js" type="application/javascript"></script>
+    <link href="./dist/index.css" rel="stylesheet"/>
+    <style>
+        div[is=x-content] {
+            display: flex;
+            justify-content: center;
+            gap: var(--gap-primary);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+        toggleSidebarBtn.addEventListener('click', () => {
+            const sidebarElem = document.querySelector('div[is=x-sidebar]');
+            sidebarElem.hidden = false;
+        });
+    });
+</script>
+
+<body>
+    <div is="x-overlay" hidden></div>
+    <div is="x-sidebar" hidden>This is the content of my sidebar.</div>
+
+    <div is="x-card" size="small">
+        <div is="x-card-header">
+            Try out the sidebar
+        </div>
+        <div is="x-card-body">
+            Give it a try!
+        </div>
+        <div is="x-card-footer">
+            <button class="toggle-sidebar-btn" is="x-button" size="small" variant="secondary">Open the Sidebar</button>
+        </div>
+    </div>
+
+    <div is="x-card" size="small">
+        <div is="x-card-header">
+            Confirm your action
+        </div>
+        <div is="x-card-body">
+            Are you sure you would like to delete this element?
+        </div>
+        <div is="x-card-footer">
+            <button is="x-button" size="extra-small" variant="primary">Primary</button>
+            <button is="x-button" size="small" variant="secondary">Secondary</button>
+            <button is="x-button" size="medium" variant="success">Success</button>
+            <button is="x-button" size="large" variant="warning">Warning</button>
+            <button is="x-button" size="extra-large" variant="danger">Danger</button>
+        </div>
+    </div>
+
+    <div is="x-card" size="medium">
+        <div is="x-card-header">
+            Confirm your action
+        </div>
+        <div is="x-card-body">
+            Are you sure you would like to delete this element?
+        </div>
+        <div is="x-card-footer">
+            <button is="x-button" size="medium" variant="primary">Primary</button>
+            <button is="x-button" size="medium" variant="secondary">Secondary</button>
+            <button is="x-button" size="medium" variant="success">Success</button>
+            <button is="x-button" size="medium" variant="warning">Warning</button>
+            <button is="x-button" size="medium" variant="danger">Danger</button>
+        </div>
+    </div>
+
+    <div is="x-card" size="large">
+        <div is="x-card-header">
+            Confirm your action
+        </div>
+        <div is="x-card-body">
+            <button is="x-button" size="large" variant="primary">Primary</button>
+            <button is="x-button" size="large" variant="secondary">Secondary</button>
+            <button is="x-button" size="large" variant="success">Success</button>
+            <button is="x-button" size="large" variant="warning">Warning</button>
+            <button is="x-button" size="large" variant="danger">Danger</button>
+        </div>
+    </div>
+</body>
+</html>

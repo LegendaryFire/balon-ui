@@ -1,0 +1,15 @@
+{
+  "name": "balon-ui",
+  "version": "1.0.0",
+  "description": "A simple component library for complex frontends.",
+  "license": "MIT",
+  "author": "Tristan Balon",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --target=es2022 --outdir=dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

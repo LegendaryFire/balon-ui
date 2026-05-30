@@ -1,0 +1,45 @@
+:root {
+    --sidebar-width: 350px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+    }
+}
+
+div[is=x-sidebar] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    background-color: var(--background-color-secondary);
+    height: 100dvh;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: 1;
+}
+
+div[is=x-sidebar]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: var(--border-width-primary) solid var(--border-color-primary);
+    pointer-events: none;
+}
+
+div[is=x-sidebar][hidden] {
+    display: block;
+    left: calc(var(--sidebar-width) * -1);
+}
+
+div[is=x-sidebar] div[is=x-overlay] {
+    z-index: -1;
+}
+
+
+div[is=x-sidebar][hidden] div[is=x-overlay] {
+    display: none;
+}

@@ -1,0 +1,38 @@
+:root {
+    /* ----------------- Generic variables ----------------- */
+    --background-color-primary: rgb(44 44 44);
+    --background-color-secondary: rgb(60 60 60);
+    --border-color-primary: rgb(66, 66, 66);
+    --border-radius-primary: 12px;
+    --border-width-primary: 2px;
+    --font-color-primary: rgb(240 240 240);
+    --gap-primary: 16px;
+
+    /* ------------ Component Specific Overrides ------------ */
+    --gap-card-primary: 8px;
+}
+
+html {
+    line-height: 1.6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-primary);
+    font-family: "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif";
+    color: var(--font-color-primary);
+    background-color: var(--background-color-primary);
+    padding: 16px;
+    width: 100dvw;
+}
