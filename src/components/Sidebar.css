@@ -2,6 +2,10 @@
     --sidebar-width: 350px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 100%;
@@ -11,61 +15,63 @@
 x-sidebar {
     & {
         display: block;
-        position: fixed;
-        width: var(--sidebar-width);
+        position: absolute;
         background-color: var(--background-color-secondary);
-        height: 100dvh;
         padding: var(--border-width-primary);
-        transition: left 0.3s ease, right 0.3s ease, width 0.3s ease;
+        overflow: hidden;
         z-index: 1;
-        left: 0;
-        top: 0;
     }
 
-    &[hidden] {
-        left: calc(var(--sidebar-width) * -1);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: var(--border-width-primary) solid var(--border-color-primary);
+        pointer-events: none;
+    }
+
+    &[position=left] {
+        & {
+            transition: left 300ms ease, width 300ms ease;
+            width: var(--sidebar-width);
+            height: 100dvh;
+            left: 0;
+            top: 0;
+        }
+
+        &[hidden] {
+            left: calc(var(--sidebar-width) * -1);
+            top: 0;
+        }
     }
 
     &[position=right] {
         & {
-            left: auto;
+            transition: right 300ms ease, width 300ms ease;
+            width: var(--sidebar-width);
+            height: 100dvh;
             right: 0;
             top: 0;
         }
 
         &[hidden] {
             right: calc(var(--sidebar-width) * -1);
-            left: auto;
+            top: 0;
         }
     }
-}
 
-x-sidebar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: var(--border-width-primary) solid var(--border-color-primary);
-    pointer-events: none;
-}
+    &[hidden] x-overlay {
+        display: none;
+    }
 
-
-x-sidebar x-overlay {
-    z-index: -1;
-}
-
-x-sidebar[position=left] x-overlay {
-    left: 0;
-    right: auto;
-}
-
-x-sidebar[position=right] x-overlay {
-    right: 0;
-    left: auto;
-}
-
-x-sidebar[hidden] x-overlay {
-    display: none;
+    x-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: 100dvh;
+    }
 }
