@@ -7,11 +7,7 @@ export class Sidebar extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        // When the side flips while the sidebar is closed, the new side animates
-        // a different property (left vs right) whose starting value is `auto`,
-        // which can't be interpolated, so the panel pops in instead of sliding.
-        // Forcing a reflow here commits the new side's off-screen position before
-        // `hidden` is toggled, giving the transition a concrete value to animate from.
+        // Reset the offsetWidth when changing position to prevent the sidebar from snapping back to its original location.
         if (name === 'position' && oldValue !== null && oldValue !== newValue && this.hidden) {
             void this.offsetWidth;
         }
