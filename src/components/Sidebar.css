@@ -2,10 +2,6 @@
     --sidebar-width: 350px;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 100%;
@@ -20,6 +16,12 @@ x-sidebar {
         padding: var(--border-width-primary);
         overflow: hidden;
         z-index: 1;
+    }
+
+    .sidebar-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
     &::before {
@@ -65,13 +67,5 @@ x-sidebar {
 
     &[hidden] x-overlay {
         display: none;
-    }
-
-    x-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100dvw;
-        height: 100dvh;
     }
 }

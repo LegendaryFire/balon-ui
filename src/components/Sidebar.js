@@ -7,6 +7,10 @@ export default class Sidebar extends HTMLElement {
                 ${this.innerHTML}
             </div>
             <x-overlay></x-overlay>
-        `
+        `;
+        const overlayElem = this.querySelector('x-overlay');
+        overlayElem.addEventListener('click', () => {
+            this.hidden = true;
+        });
     }
 }

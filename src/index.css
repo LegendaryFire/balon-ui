@@ -28,4 +28,5 @@ body {
     background-color: var(--background-color-primary);
     padding: 16px;
     width: 100dvw;
+    overflow-x: hidden;
 }
