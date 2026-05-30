@@ -7,7 +7,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --target=es2022 --outdir=dist"
+    "build": "esbuild src/index.js --bundle --format=esm --target=es2022 --outdir=dist"
   },
   "devDependencies": {
     "esbuild": "^0.28.0"

@@ -7,7 +7,7 @@ import { Card, CardHeader, CardBody, CardFooter } from './components/Card';
 import Overlay from './components/Overlay';
 import { Sidebar, SidebarHeader, SidebarBody, SidebarFooter } from './components/Sidebar';
 
-class BalonUi {
+export default class BalonUi {
     static Content = Content;
     static Row = Row;
     static Button = Button;
@@ -36,7 +36,3 @@ class BalonUi {
         customElements.define('x-sidebar-footer', BalonUi.SidebarFooter);
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    BalonUi.initializeLibrary();
-});

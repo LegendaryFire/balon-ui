@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./dist/index.js" type="application/javascript"></script>
+    <script type="module" src="./dist/index.js"></script>
     <link href="./dist/index.css" rel="stylesheet"/>
     <link rel="stylesheet" href="src/components/Card.css">
 </head>
 
-<script type="application/javascript">
+<script type="module">
+    import BalonUi from './dist/index.js';
+
     document.addEventListener('DOMContentLoaded', () => {
+        // Register the component elements.
+        BalonUi.initializeLibrary();
+
         const toggleLeftSidebarBtn = document.querySelector('.toggle-left-sidebar-btn');
         toggleLeftSidebarBtn.addEventListener('click', () => {
             const sidebarElem = document.querySelector('x-sidebar');
