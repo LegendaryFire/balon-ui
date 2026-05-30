@@ -12,16 +12,24 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
-        toggleSidebarBtn.addEventListener('click', () => {
+        const toggleLeftSidebarBtn = document.querySelector('.toggle-left-sidebar-btn');
+        toggleLeftSidebarBtn.addEventListener('click', () => {
             const sidebarElem = document.querySelector('x-sidebar');
+            sidebarElem.setAttribute('position', 'left');
+            sidebarElem.hidden = false;
+        });
+
+        const toggleRightSidebarBtn = document.querySelector('.toggle-right-sidebar-btn');
+        toggleRightSidebarBtn.addEventListener('click', () => {
+            const sidebarElem = document.querySelector('x-sidebar');
+            sidebarElem.setAttribute('position', 'right');
             sidebarElem.hidden = false;
         });
     });
 </script>
 
 <body>
-    <x-sidebar position="right">This is the content of my sidebar.</x-sidebar>
+    <x-sidebar hidden>This is the content of my sidebar.</x-sidebar>
 
     <x-content>
         <x-card size="medium">
@@ -55,7 +63,8 @@
                 Example Sidebar
             </x-card-header>
             <x-card-body>
-                <x-button class="toggle-sidebar-btn" size="small" variant="primary">Open the Sidebar</x-button>
+                <x-button class="toggle-left-sidebar-btn" size="small" variant="primary">Open Left Sidebar</x-button>
+                <x-button class="toggle-right-sidebar-btn" size="small" variant="primary">Open Right Sidebar</x-button>
             </x-card-body>
         </x-card>
 

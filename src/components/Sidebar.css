@@ -18,31 +18,24 @@ x-sidebar {
         padding: var(--border-width-primary);
         transition: left 0.3s ease, right 0.3s ease, width 0.3s ease;
         z-index: 1;
+        left: 0;
+        top: 0;
     }
 
     &[hidden] {
-        display: block;
-    }
-
-    &[position=left] {
-        & {
-            left: 0;
-            top: 0;
-        }
-
-        &[hidden] {
-            left: calc(var(--sidebar-width) * -1);
-        }
+        left: calc(var(--sidebar-width) * -1);
     }
 
     &[position=right] {
         & {
+            left: auto;
             right: 0;
             top: 0;
         }
 
         &[hidden] {
             right: calc(var(--sidebar-width) * -1);
+            left: auto;
         }
     }
 }
