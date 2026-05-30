@@ -1,3 +1,6 @@
 import './Card.css';
 
-export default class Card extends HTMLDivElement { }
+export class Card extends HTMLElement { }
+export class CardHeader extends HTMLElement { }
+export class CardBody extends HTMLElement { }
+export class CardFooter extends HTMLElement { }

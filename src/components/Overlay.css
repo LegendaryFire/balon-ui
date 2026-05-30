@@ -1,4 +1,5 @@
-div[is=x-overlay] {
+x-overlay {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;

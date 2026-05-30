@@ -1,3 +1,3 @@
 import './Button.css';
 
-export default class Button extends HTMLButtonElement { }
+export default class Button extends HTMLElement { }

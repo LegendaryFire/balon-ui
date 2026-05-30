@@ -35,11 +35,11 @@ div[is=x-sidebar][hidden] {
     left: calc(var(--sidebar-width) * -1);
 }
 
-div[is=x-sidebar] div[is=x-overlay] {
+div[is=x-sidebar] x-overlay {
     z-index: -1;
 }
 
 
-div[is=x-sidebar][hidden] div[is=x-overlay] {
+div[is=x-sidebar][hidden] x-overlay {
     display: none;
 }

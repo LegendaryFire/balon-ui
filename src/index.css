@@ -12,10 +12,6 @@
     --gap-card-primary: 8px;
 }
 
-html {
-    line-height: 1.6;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }

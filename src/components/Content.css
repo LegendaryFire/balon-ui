@@ -1,0 +1,7 @@
+x-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap-primary);
+    max-width: 1200px;
+}

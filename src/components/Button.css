@@ -7,73 +7,77 @@
     --border-radius-button-primary: 8px;
 }
 
-button[is=x-button] {
+x-button {
     color: var(--font-color-primary);
     border: none;
     border-radius: var(--border-radius-button-primary);
     cursor: pointer;
     transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
     height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
 
 /* ------------ Button Colors -------------- */
-button[is=x-button] {
+x-button {
     background: linear-gradient(135deg, oklch(from var(--background-color-button) l c h) 0%,
     oklch(from var(--background-color-button) calc(l - 0.04) c h) 45%,
     oklch(from var(--background-color-button) calc(l - 0.08) c h) 100%);
 }
 
-button[is=x-button],
-button[is=x-button][variant=primary] {
+x-button,
+x-button[variant=primary] {
     --background-color-button: var(--background-color-button-primary);
 }
 
-button[is=x-button][variant=secondary] {
+x-button[variant=secondary] {
     --background-color-button: var(--background-color-button-secondary);
 }
 
-button[is=x-button][variant=success] {
+x-button[variant=success] {
     --background-color-button: var(--background-color-button-success);
 }
 
-button[is=x-button][variant=warning] {
+x-button[variant=warning] {
     --background-color-button: var(--background-color-button-warning);
 }
 
-button[is=x-button][variant=danger] {
+x-button[variant=danger] {
     --background-color-button: var(--background-color-button-danger);
 }
 
-button[is=x-button][size=extra-small] {
+x-button[size=extra-small] {
     font-size: 0.8rem;
-    padding: 5px 10px;
+    padding: 8px 12px 5px 12px;
 }
 
-button[is=x-button][size=small] {
+x-button[size=small] {
     font-size: 0.9rem;
-    padding: 6px 12px;
+    padding: 9px 14px 6px 14px;
 }
 
-button[is=x-button],
-button[is=x-button][size=medium] {
+x-button,
+x-button[size=medium] {
     font-size: 1rem;
-    padding: 7px 14px;
+    padding: 10px 16px 7px 16px;
 }
 
-button[is=x-button][size=large] {
+x-button[size=large] {
     font-size: 1.1rem;
-    padding: 8px 16px;
+    padding: 11px 18px 8px 18px;
 }
 
-button[is=x-button][size=extra-large] {
+x-button[size=extra-large] {
     font-size: 1.2rem;
-    padding: 9px 18px;
+    padding: 12px 18px 9px 18px;
 }
 
-button[is=x-button]:hover {
+x-button:hover {
     filter: brightness(1.10);
 }
 
-button[is=x-button]:active {
+x-button:active {
     filter: brightness(0.95);
 }

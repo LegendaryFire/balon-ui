@@ -1,0 +1,7 @@
+x-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-primary);
+    width: 100%;
+    flex-grow: 1;
+}

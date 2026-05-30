@@ -1,13 +1,73 @@
-div[is=x-card] {
+x-card {
     & {
-        background-color: var(--background-color-secondary);
+        display: block;
         color: var(--font-color-primary);
         border: var(--border-width-primary) solid var(--border-color-primary);
         border-radius: var(--border-radius-primary);
         width: 100%;
     }
 
-    div[is=x-card-header] {
+    &,
+    &[variant=primary] {
+        background-color: var(--background-color-secondary);
+    }
+
+    &[variant=secondary] {
+        background-color: var(--background-color-primary);
+    }
+
+    &[size=small] {
+        x-card-header {
+            padding: 8px 10px 6px 10px;
+        }
+
+        x-card-body {
+            padding: 10px 10px;
+        }
+
+        x-card-footer {
+            padding: 6px 10px;
+        }
+    }
+
+    &[size=medium] {
+        x-card-header {
+            padding: 10px 12px 8px 12px;
+        }
+
+        x-card-body {
+            padding: 12px 12px;
+        }
+
+        x-card-footer {
+            padding: 8px 12px;
+        }
+    }
+
+    &[size=large] {
+        x-card-header {
+            padding: 16px 18px 14px 18px;
+            font-size: 18px;
+        }
+
+        x-card-footer {
+            padding: 14px 18px;
+        }
+
+        x-card-body {
+            padding: 18px 18px;
+        }
+    }
+
+    x-card-body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--gap-card-primary);
+    }
+
+    x-card-header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -16,56 +76,11 @@ div[is=x-card] {
         font-weight: bold;
     }
 
-    div[is=x-card-footer] {
+    x-card-footer {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: var(--gap-card-primary);
         border-top: var(--border-width-primary) solid var(--border-color-primary);
-    }
-}
-
-div[is=x-card] {
-    &[size=small] {
-        div[is=x-card-header] {
-            padding: 8px 10px 6px 10px;
-        }
-
-        div[is=x-card-footer] {
-            padding: 6px 10px;
-        }
-
-        div[is=x-card-body] {
-            padding: 10px 10px;
-        }
-    }
-
-    &[size=medium] {
-        div[is=x-card-header] {
-            padding: 10px 12px 8px 12px;
-        }
-
-        div[is=x-card-footer] {
-            padding: 8px 12px;
-        }
-
-        div[is=x-card-body] {
-            padding: 12px 12px;
-        }
-    }
-
-    &[size=large] {
-        div[is=x-card-header] {
-            padding: 16px 18px 14px 18px;
-            font-size: 18px;
-        }
-
-        div[is=x-card-footer] {
-            padding: 14px 18px;
-        }
-
-        div[is=x-card-body] {
-            padding: 18px 18px;
-        }
     }
 }
