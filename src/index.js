@@ -19,9 +19,11 @@ class Balon {
     static Sidebar = Sidebar;
 }
 
-customElements.define('x-content', Balon.Content);
-customElements.define('x-row', Balon.Row);
-customElements.define('x-button', Balon.Button);
-customElements.define('x-card', Balon.Card);
-customElements.define('x-overlay', Balon.Overlay);
-customElements.define('x-sidebar', Balon.Sidebar);
+document.addEventListener('DOMContentLoaded', () => {
+    customElements.define('x-content', Balon.Content);
+    customElements.define('x-row', Balon.Row);
+    customElements.define('x-button', Balon.Button);
+    customElements.define('x-card', Balon.Card);
+    customElements.define('x-overlay', Balon.Overlay);
+    customElements.define('x-sidebar', Balon.Sidebar);
+});

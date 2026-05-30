@@ -1,3 +1,7 @@
+:root {
+    --gap-card-primary: 8px;
+}
+
 x-card {
     & {
         display: block;

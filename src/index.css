@@ -7,9 +7,6 @@
     --border-width-primary: 2px;
     --font-color-primary: rgb(240 240 240);
     --gap-primary: 16px;
-
-    /* ------------ Component Specific Overrides ------------ */
-    --gap-card-primary: 8px;
 }
 
 *, *::before, *::after {

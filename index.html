@@ -7,20 +7,21 @@
     <title>Document</title>
     <script src="./dist/index.js" type="application/javascript"></script>
     <link href="./dist/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/components/Card.css">
 </head>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
         toggleSidebarBtn.addEventListener('click', () => {
-            const sidebarElem = document.querySelector('div[is=x-sidebar]');
+            const sidebarElem = document.querySelector('x-sidebar');
             sidebarElem.hidden = false;
         });
     });
 </script>
 
 <body>
-    <div is="x-sidebar" hidden>This is the content of my sidebar.</div>
+    <x-sidebar position="right">This is the content of my sidebar.</x-sidebar>
 
     <x-content>
         <x-card size="medium">

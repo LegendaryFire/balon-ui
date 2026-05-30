@@ -8,18 +8,46 @@
     }
 }
 
-div[is=x-sidebar] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: var(--sidebar-width);
-    background-color: var(--background-color-secondary);
-    height: 100dvh;
-    transition: left 0.3s ease, width 0.3s ease;
-    z-index: 1;
+x-sidebar {
+    & {
+        display: block;
+        position: fixed;
+        width: var(--sidebar-width);
+        background-color: var(--background-color-secondary);
+        height: 100dvh;
+        padding: var(--border-width-primary);
+        transition: left 0.3s ease, right 0.3s ease, width 0.3s ease;
+        z-index: 1;
+    }
+
+    &[hidden] {
+        display: block;
+    }
+
+    &[position=left] {
+        & {
+            left: 0;
+            top: 0;
+        }
+
+        &[hidden] {
+            left: calc(var(--sidebar-width) * -1);
+        }
+    }
+
+    &[position=right] {
+        & {
+            right: 0;
+            top: 0;
+        }
+
+        &[hidden] {
+            right: calc(var(--sidebar-width) * -1);
+        }
+    }
 }
 
-div[is=x-sidebar]::before {
+x-sidebar::before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,16 +58,21 @@ div[is=x-sidebar]::before {
     pointer-events: none;
 }
 
-div[is=x-sidebar][hidden] {
-    display: block;
-    left: calc(var(--sidebar-width) * -1);
-}
 
-div[is=x-sidebar] x-overlay {
+x-sidebar x-overlay {
     z-index: -1;
 }
 
+x-sidebar[position=left] x-overlay {
+    left: 0;
+    right: auto;
+}
 
-div[is=x-sidebar][hidden] x-overlay {
+x-sidebar[position=right] x-overlay {
+    right: 0;
+    left: auto;
+}
+
+x-sidebar[hidden] x-overlay {
     display: none;
 }
