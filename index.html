@@ -16,6 +16,7 @@
         --border-color-primary: rgb(193 193 193);
         --font-color-primary: rgb(51 51 51);
         --font-color-secondary: rgb(50 50 50);
+        --background-color-button-secondary: rgb(151 168 174);
         --background-color-button-danger: rgb(227 104 104);
         --background-color-button-success: rgb(34 149 78);
     }
@@ -34,7 +35,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Register the component elements.
         const toggleLeftSidebarBtn = document.querySelector('x-button.toggle-left-sidebar-btn');
         toggleLeftSidebarBtn.addEventListener('click', () => {
             const sidebarElem = document.querySelector('x-sidebar');
@@ -149,6 +149,11 @@
                         </x-card-header>
                         <x-card-body>
                             This is an example of a small card.
+                        </x-card-body>
+                    </x-card>
+                    <x-card size="small" variant="secondary">
+                        <x-card-body>
+                            This is an example of a small card with no header or footer.
                         </x-card-body>
                     </x-card>
                 </x-row>
