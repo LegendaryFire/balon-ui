@@ -1,0 +1,63 @@
+:root {
+    --navbar-background-color: var(--background-color-secondary);
+    --navbar-height: 58px;
+    --navbar-item-color: var(--font-color-secondary);
+}
+
+x-navbar {
+    & {
+        display: flex;
+        align-items: center;
+        height: var(--navbar-height);
+        width: 100dvw;
+        background-color: var(--navbar-background-color);
+        border-bottom: var(--border-width-primary) solid var(--border-color-primary);
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--navbar-height);
+        max-width: 800px;
+        gap: 16px;
+    }
+
+    &[width=content] {
+        & {
+            justify-content: center;
+        }
+
+        nav {
+            max-width: 800px;
+        }
+    }
+}
+
+x-navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+x-navbar-item {
+    & {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin-top: 5px;
+        text-decoration: none;
+        color: var(--font-color-secondary);
+        letter-spacing: 0.03em;
+    }
+
+    a:hover {
+        filter: brightness(110%);
+    }
+
+    &[active] a {
+        font-weight: bold;
+    }
+}

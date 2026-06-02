@@ -7,7 +7,9 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --format=esm --target=es2022 --outdir=dist"
+    "build": "esbuild src/index.js --bundle --format=iife --target=es2022 --outdir=dist",
+    "watch": "esbuild src/index.js --bundle --format=iife --target=es2022 --outdir=dist --watch",
+    "dev": "esbuild src/index.js --bundle --format=iife --target=es2022 --outdir=dist --watch --servedir=."
   },
   "devDependencies": {
     "esbuild": "^0.28.0"

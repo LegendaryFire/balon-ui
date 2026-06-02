@@ -1,9 +1,9 @@
 :root {
-    --background-color-button-primary: rgb(99 67 214);
+    --background-color-button-primary: rgb(16 144 184);
     --background-color-button-secondary: rgb(96 111 133);
     --background-color-button-danger: rgb(179 45 45);
     --background-color-button-warning: rgb(202 155 71);
-    --background-color-button-success: rgb(32 172 86);
+    --background-color-button-success: rgb(30 163 81);
     --border-radius-button-primary: 8px;
 }
 
@@ -25,6 +25,7 @@ x-button {
     background: linear-gradient(135deg, oklch(from var(--background-color-button) l c h) 0%,
     oklch(from var(--background-color-button) calc(l - 0.04) c h) 45%,
     oklch(from var(--background-color-button) calc(l - 0.08) c h) 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 x-button,
@@ -49,29 +50,29 @@ x-button[variant=danger] {
 }
 
 x-button[size=extra-small] {
-    font-size: 0.8rem;
-    padding: 8px 12px 5px 12px;
+    font-size: 0.95rem;
+    padding: 7px 12px;
 }
 
 x-button[size=small] {
-    font-size: 0.9rem;
-    padding: 9px 14px 6px 14px;
+    font-size: 1rem;
+    padding: 8px 14px;
 }
 
 x-button,
 x-button[size=medium] {
-    font-size: 1rem;
-    padding: 10px 16px 7px 16px;
+    font-size: 1.05rem;
+    padding: 9px 16px;
 }
 
 x-button[size=large] {
     font-size: 1.1rem;
-    padding: 11px 18px 8px 18px;
+    padding: 10px 18px;
 }
 
 x-button[size=extra-large] {
-    font-size: 1.2rem;
-    padding: 12px 18px 9px 18px;
+    font-size: 1.15rem;
+    padding: 12px 18px;
 }
 
 x-button:hover {

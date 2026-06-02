@@ -1,5 +1,6 @@
 :root {
     --sidebar-width: 350px;
+    --sidebar-header-height: 58px;
 }
 
 @media (max-width: 768px) {
@@ -77,6 +78,7 @@ x-sidebar {
             padding: 16px 8px;
             border-bottom: var(--border-width-primary) solid var(--border-color-primary);
             font-weight: bold;
+            height: var(--sidebar-header-height);
         }
 
         .sidebar-header-title {
