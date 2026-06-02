@@ -7,6 +7,7 @@ import { Card, CardHeader, CardBody, CardFooter } from './components/Card';
 import Overlay from './components/Overlay';
 import { Sidebar, SidebarHeader, SidebarBody, SidebarFooter } from './components/Sidebar';
 import { Navbar, NavbarLogo, NavbarItem } from './components/Navbar';
+import { Modal, ModalHeader } from './components/Modal';
 
 export default class BalonUi {
     static Content = Content;
@@ -21,6 +22,8 @@ export default class BalonUi {
     static SidebarHeader = SidebarHeader;
     static SidebarBody = SidebarBody;
     static SidebarFooter = SidebarFooter;
+    static Modal = Modal;
+    static ModalHeader = ModalHeader;
     static Navbar = Navbar;
     static NavbarLogo = NavbarLogo;
     static NavbarItem = NavbarItem;
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     customElements.define('x-sidebar-header', BalonUi.SidebarHeader);
     customElements.define('x-sidebar-body', BalonUi.SidebarBody);
     customElements.define('x-sidebar-footer', BalonUi.SidebarFooter);
+    customElements.define('x-modal', BalonUi.Modal);
+    customElements.define('x-modal-header', BalonUi.ModalHeader);
     customElements.define('x-navbar', BalonUi.Navbar);
     customElements.define('x-navbar-logo', BalonUi.NavbarLogo);
     customElements.define('x-navbar-item', BalonUi.NavbarItem);

@@ -57,6 +57,21 @@
             btnIcon.classList.toggle('fa-regular', bodyElem.dataset.theme === 'light');
             btnIcon.classList.toggle('fa-solid', bodyElem.dataset.theme === 'dark');
         });
+
+        const toggleBasicModalBtn = document.querySelector('x-button.toggle-basic-modal');
+        toggleBasicModalBtn.addEventListener('click', () => {
+            const modalElem = document.createElement('x-modal');
+            const modalHeaderElem = document.createElement('x-modal-header');
+            modalHeaderElem.innerHTML = 'Basic Modal';
+            modalElem.append(modalHeaderElem);
+            const modalContentElem = document.createElement('x-modal-content');
+            modalContentElem.innerHTML = 'This is my modal content.';
+            modalElem.append(modalContentElem);
+            const modalFooterElem = document.createElement('x-modal-footer');
+            modalFooterElem.innerHTML = 'This is my modal footer.';
+            modalElem.append(modalFooterElem);
+            document.body.append(modalElem);
+        });
     });
 </script>
 
@@ -170,6 +185,15 @@
                         </x-card-footer>
                     </x-card>
                 </x-row>
+            </x-card-body>
+        </x-card>
+
+        <x-card size="medium">
+            <x-card-header>
+                Example Modal Variants
+            </x-card-header>
+            <x-card-body>
+                <x-button class="toggle-basic-modal" size="small" variant="primary">Open Basic Modal</x-button>
             </x-card-body>
         </x-card>
     </x-content>

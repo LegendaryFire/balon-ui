@@ -12,7 +12,7 @@
 x-sidebar {
     & {
         display: block;
-        position: absolute;
+        position: fixed;
         background-color: var(--background-color-secondary);
         padding: var(--border-width-primary);
         overflow: hidden;
