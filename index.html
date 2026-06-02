@@ -61,23 +61,25 @@
         const toggleBasicModalBtn = document.querySelector('x-button.toggle-basic-modal');
         toggleBasicModalBtn.addEventListener('click', () => {
             const modalElem = document.createElement('x-modal');
-            const modalHeaderElem = document.createElement('x-modal-header');
-            modalHeaderElem.innerHTML = 'Basic Modal';
-            modalElem.append(modalHeaderElem);
-            const modalContentElem = document.createElement('x-modal-content');
-            modalContentElem.innerHTML = 'This is my modal content.';
-            modalElem.append(modalContentElem);
+            modalElem.innerHTML = `
+                <x-modal-header>
+                    Basic Modal
+                </x-modal-header>
+                <x-modal-content>
+                    This is my modal content.
+                </x-modal-content>
+            `
             document.body.append(modalElem);
         });
 
         const toggleFooterModalBtn = document.querySelector('x-button.toggle-footer-modal');
         toggleFooterModalBtn.addEventListener('click', () => {
             const modalElem = document.createElement('x-modal');
-            const modalHeaderElem = document.createElement('x-modal-header');
-            modalHeaderElem.innerHTML = 'Modal With Footer';
-            modalElem.append(modalHeaderElem);
-            const modalContentElem = document.createElement('x-modal-content');
-            modalContentElem.innerHTML = `
+            modalElem.innerHTML = `
+            <x-modal-header>
+                Modal With Footer
+            </x-modal-header>
+            <x-modal-content>
                 <x-card size="small" variant="primary">
                     <x-card-header>
                         Small Card
@@ -86,11 +88,11 @@
                         This modal even has a card element!
                     </x-card-body>
                 </x-card>
+            </x-modal-content>
+            <x-modal-footer>
+                This is my modal footer.
+            </x-modal-footer>
             `;
-            modalElem.append(modalContentElem);
-            const modalFooterElem = document.createElement('x-modal-footer');
-            modalFooterElem.innerHTML = 'This is my modal footer.';
-            modalElem.append(modalFooterElem);
             document.body.append(modalElem);
         });
     });
