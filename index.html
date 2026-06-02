@@ -14,7 +14,7 @@
         --background-color-primary: rgb(214 214 214);
         --background-color-secondary: rgb(198 198 198);
         --border-color-primary: rgb(193 193 193);
-        --font-color-primary: rgb(51 51 51);
+        --font-color-primary: rgb(64 64 64);
         --font-color-secondary: rgb(50 50 50);
         --background-color-button-secondary: rgb(151 168 174);
         --background-color-button-danger: rgb(227 104 104);
@@ -76,22 +76,22 @@
         toggleFooterModalBtn.addEventListener('click', () => {
             const modalElem = document.createElement('x-modal');
             modalElem.innerHTML = `
-            <x-modal-header>
-                Modal With Footer
-            </x-modal-header>
-            <x-modal-content>
-                <x-card size="small" variant="primary">
-                    <x-card-header>
-                        Small Card
-                    </x-card-header>
-                    <x-card-body>
-                        This modal even has a card element!
-                    </x-card-body>
-                </x-card>
-            </x-modal-content>
-            <x-modal-footer>
-                This is my modal footer.
-            </x-modal-footer>
+                <x-modal-header>
+                    Modal With Footer
+                </x-modal-header>
+                <x-modal-content>
+                    <x-card size="small" variant="primary">
+                        <x-card-header>
+                            Small Card
+                        </x-card-header>
+                        <x-card-body>
+                            This modal even has a card element!
+                        </x-card-body>
+                    </x-card>
+                </x-modal-content>
+                <x-modal-footer>
+                    This is my modal footer.
+                </x-modal-footer>
             `;
             document.body.append(modalElem);
         });
@@ -107,7 +107,7 @@
             This is the content of my sidebar.
         </x-sidebar-body>
     </x-sidebar>
-    <x-navbar width="content" sticky>
+    <x-navbar sticky>
         <x-navbar-logo>
             <svg class="balon-logo" viewBox="0 0 124 34" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Balon UI">
               <defs>

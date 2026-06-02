@@ -25,8 +25,8 @@ x-navbar {
         align-items: center;
         width: 100%;
         height: var(--navbar-height);
-        max-width: 800px;
         gap: 16px;
+        margin: 0 16px;
     }
 
     &[width=content] {
