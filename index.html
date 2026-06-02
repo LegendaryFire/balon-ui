@@ -10,35 +10,52 @@
 </head>
 
 <style>
-    :root {
+    :root:has(body[data-theme=light]) {
         --background-color-primary: rgb(214 214 214);
         --background-color-secondary: rgb(198 198 198);
         --border-color-primary: rgb(193 193 193);
-        --font-color-primary: rgb(0 0 0);
+        --font-color-primary: rgb(51 51 51);
         --font-color-secondary: rgb(50 50 50);
+        --background-color-button-danger: rgb(227 104 104);
+        --background-color-button-success: rgb(34 149 78);
     }
 
-    .balon-logo {
+    x-navbar-logo svg.balon-logo {
         height: 48px;
         width: auto;
+    }
+
+    x-navbar-item.theme-toggle-btn {
+        font-size: 26px;
+        margin-left: auto;
+        margin-right: 8px;
     }
 </style>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // Register the component elements.
-        const toggleLeftSidebarBtn = document.querySelector('.toggle-left-sidebar-btn');
+        const toggleLeftSidebarBtn = document.querySelector('x-button.toggle-left-sidebar-btn');
         toggleLeftSidebarBtn.addEventListener('click', () => {
             const sidebarElem = document.querySelector('x-sidebar');
             sidebarElem.setAttribute('position', 'left');
             sidebarElem.hidden = false;
         });
 
-        const toggleRightSidebarBtn = document.querySelector('.toggle-right-sidebar-btn');
+        const toggleRightSidebarBtn = document.querySelector('x-button.toggle-right-sidebar-btn');
         toggleRightSidebarBtn.addEventListener('click', () => {
             const sidebarElem = document.querySelector('x-sidebar');
             sidebarElem.setAttribute('position', 'right');
             sidebarElem.hidden = false;
+        });
+
+        const themeToggleBtn = document.querySelector('x-navbar-item.theme-toggle-btn');
+        themeToggleBtn.addEventListener('click', () => {
+            const bodyElem = document.querySelector('body');
+            bodyElem.dataset.theme = bodyElem.dataset.theme === 'light' ? 'dark' : 'light';
+            const btnIcon = themeToggleBtn.querySelector('i');
+            btnIcon.classList.toggle('fa-regular', bodyElem.dataset.theme === 'light');
+            btnIcon.classList.toggle('fa-solid', bodyElem.dataset.theme === 'dark');
         });
     });
 </script>
@@ -68,6 +85,7 @@
         </x-navbar-logo>
         <x-navbar-item variant="link" href="#" active>Home</x-navbar-item>
         <x-navbar-item variant="link" href="#">About</x-navbar-item>
+        <x-navbar-item variant="link" class="theme-toggle-btn"><i class="fa-solid fa-moon"></i></x-navbar-item>
     </x-navbar>
     <x-content>
         <x-card size="medium">

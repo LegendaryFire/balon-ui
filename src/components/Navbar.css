@@ -51,6 +51,7 @@ x-navbar-item {
         text-decoration: none;
         color: var(--font-color-secondary);
         letter-spacing: 0.03em;
+        cursor: pointer;
     }
 
     a:hover {

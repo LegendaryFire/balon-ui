@@ -1,5 +1,4 @@
 import './Sidebar.css';
-import { createElement, icons } from 'lucide';
 
 export class Sidebar extends HTMLElement {
     static get observedAttributes() {
@@ -31,10 +30,11 @@ export class SidebarHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="sidebar-header-title">${this.innerHTML}</div>
-            <button class="sidebar-header-close" type="button" aria-label="Close"></button>
+            <button class="sidebar-header-close" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         `;
         const closeElem = this.querySelector('button.sidebar-header-close');
-        closeElem.appendChild(createElement(icons.X));
         closeElem.addEventListener('click', () => {
             // Get the sidebar in which the header is located in and set it to hidden to close.
             const sidebar = this.closest('x-sidebar');

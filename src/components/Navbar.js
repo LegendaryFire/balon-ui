@@ -17,6 +17,8 @@ export class NavbarItem extends HTMLElement {
         const itemVariant = this.getAttribute('variant');
 
         const itemLink = this.getAttribute('href');
-        this.innerHTML = `<a href="${itemLink}">${this.innerHTML}</a>`;
+        this.innerHTML = `
+            <a ${itemLink ? `href="${itemLink}"` : ''}>${this.innerHTML}</a>
+        `;
     }
 }
