@@ -67,6 +67,27 @@
             const modalContentElem = document.createElement('x-modal-content');
             modalContentElem.innerHTML = 'This is my modal content.';
             modalElem.append(modalContentElem);
+            document.body.append(modalElem);
+        });
+
+        const toggleFooterModalBtn = document.querySelector('x-button.toggle-footer-modal');
+        toggleFooterModalBtn.addEventListener('click', () => {
+            const modalElem = document.createElement('x-modal');
+            const modalHeaderElem = document.createElement('x-modal-header');
+            modalHeaderElem.innerHTML = 'Modal With Footer';
+            modalElem.append(modalHeaderElem);
+            const modalContentElem = document.createElement('x-modal-content');
+            modalContentElem.innerHTML = `
+                <x-card size="small" variant="primary">
+                    <x-card-header>
+                        Small Card
+                    </x-card-header>
+                    <x-card-body>
+                        This modal even has a card element!
+                    </x-card-body>
+                </x-card>
+            `;
+            modalElem.append(modalContentElem);
             const modalFooterElem = document.createElement('x-modal-footer');
             modalFooterElem.innerHTML = 'This is my modal footer.';
             modalElem.append(modalFooterElem);
@@ -194,6 +215,7 @@
             </x-card-header>
             <x-card-body>
                 <x-button class="toggle-basic-modal" size="small" variant="primary">Open Basic Modal</x-button>
+                <x-button class="toggle-footer-modal" size="small" variant="primary">Open Modal With Footer</x-button>
             </x-card-body>
         </x-card>
     </x-content>
