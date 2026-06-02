@@ -1,6 +1,6 @@
 :root {
     --background-color-button-primary: rgb(16 144 184);
-    --background-color-button-secondary: rgb(96 111 133);
+    --background-color-button-secondary: rgb(119 131 140);
     --background-color-button-danger: rgb(179 45 45);
     --background-color-button-warning: rgb(202 155 71);
     --background-color-button-success: rgb(30 163 81);
@@ -25,7 +25,7 @@ x-button {
     background: linear-gradient(135deg, oklch(from var(--background-color-button) l c h) 0%,
     oklch(from var(--background-color-button) calc(l - 0.04) c h) 45%,
     oklch(from var(--background-color-button) calc(l - 0.08) c h) 100%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 x-button,
@@ -50,18 +50,18 @@ x-button[variant=danger] {
 }
 
 x-button[size=extra-small] {
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     padding: 7px 12px;
 }
 
 x-button[size=small] {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 8px 14px;
 }
 
 x-button,
 x-button[size=medium] {
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: 9px 16px;
 }
 

@@ -64,7 +64,7 @@ x-card {
         align-items: center;
         gap: var(--gap-card-primary);
         border-bottom: var(--border-width-primary) solid var(--border-color-primary);
-        font-weight: bold;
+        font-weight: 500;
     }
 
     x-card-footer {

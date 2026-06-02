@@ -7,15 +7,19 @@
     --border-color-primary: rgb(66, 66, 66);
     --border-radius-primary: 12px;
     --border-width-primary: 2px;
+    --font-family: "Ubuntu";
+    --font-weight: 400;
     --font-color-primary: rgb(240 240 240);
     --font-color-secondary: rgb(207 207 207);
     --gap-primary: 16px;
-    --line-height: 0.83em;
+    --letter-spacing: 0.01em;
+    --line-height: 1em;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
 }
 
 body, h1, h2, p, figure {
@@ -28,7 +32,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: var(--gap-primary);
-    font-family: "Ubuntu", sans-serif;
+    font-family: var(--font-family), sans-serif;
+    font-weight: var(--font-weight);
     color: var(--font-color-primary);
     background-color: var(--background-color-primary);
     padding: 0 16px 16px 16px;
