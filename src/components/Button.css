@@ -51,28 +51,28 @@ x-button[variant=danger] {
 
 x-button[size=extra-small] {
     font-size: 0.90rem;
-    padding: 7px 12px;
+    padding: 7px 14px;
 }
 
 x-button[size=small] {
     font-size: 0.95rem;
-    padding: 8px 14px;
+    padding: 8px 16px;
 }
 
 x-button,
 x-button[size=medium] {
     font-size: 1rem;
-    padding: 9px 16px;
+    padding: 9px 18px;
 }
 
 x-button[size=large] {
     font-size: 1.1rem;
-    padding: 10px 18px;
+    padding: 10px 20px;
 }
 
 x-button[size=extra-large] {
     font-size: 1.15rem;
-    padding: 12px 18px;
+    padding: 12px 22px;
 }
 
 x-button:hover {
