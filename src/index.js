@@ -8,6 +8,7 @@ import Overlay from './components/Overlay';
 import { Sidebar, SidebarHeader, SidebarBody, SidebarFooter } from './components/Sidebar';
 import { Navbar, NavbarLogo, NavbarItem } from './components/Navbar';
 import { Modal, ModalHeader } from './components/Modal';
+import { Input, InputWrapper, Label } from './components/Input';
 
 export default class BalonUi {
     static Content = Content;
@@ -17,6 +18,9 @@ export default class BalonUi {
     static CardHeader = CardHeader;
     static CardBody = CardBody;
     static CardFooter = CardFooter;
+    static Input = Input;
+    static InputWrapper = InputWrapper;
+    static Label = Label;
     static Overlay = Overlay;
     static Sidebar = Sidebar;
     static SidebarHeader = SidebarHeader;
@@ -37,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     customElements.define('x-card-header', BalonUi.CardHeader);
     customElements.define('x-card-body', BalonUi.CardBody);
     customElements.define('x-card-footer', BalonUi.CardFooter);
+    customElements.define('x-input', BalonUi.Input);
+    customElements.define('x-input-wrapper', BalonUi.InputWrapper);
+    customElements.define('x-label', BalonUi.Label);
     customElements.define('x-overlay', BalonUi.Overlay);
     customElements.define('x-sidebar', BalonUi.Sidebar);
     customElements.define('x-sidebar-header', BalonUi.SidebarHeader);
